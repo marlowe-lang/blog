@@ -7,7 +7,8 @@
    viewBox="0 0 209.77702 60.703941"
    version="1.1"
    id="svg1"
-   sodipodi:docname="automatic-save-1000-2024_07_23_11_50_35-100435-1.svg"
+   sodipodi:docname="designs.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +23,16 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     showgrid="false" />
+     showgrid="false"
+     inkscape:zoom="0.37950337"
+     inkscape:cx="176.54652"
+     inkscape:cy="513.82943"
+     inkscape:window-width="1680"
+     inkscape:window-height="1050"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs1" />
   <g
@@ -118,56 +128,56 @@
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-size:2.18492px;line-height:0;font-family:sans-serif;stroke-width:0.163869"
-       x="126.44218"
-       y="43.166916"
+       style="font-size:2.10706px;line-height:0;font-family:sans-serif;stroke-width:0.15803"
+       x="140.05675"
+       y="45.818314"
        id="text11"><tspan
          sodipodi:role="line"
-         style="font-size:2.18492px;line-height:1;stroke-width:0.163869"
-         x="126.44218"
-         y="43.166916"
+         style="font-size:2.10706px;line-height:1;stroke-width:0.15803"
+         x="140.05675"
+         y="45.818314"
          id="tspan12" /><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.18492px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.163869"
-         x="126.44218"
-         y="45.526093"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.15803"
+         x="140.05675"
+         y="48.609383"
          id="tspan31">Address: Marlowe interpreter</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.18492px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.163869"
-         x="126.44218"
-         y="47.907658"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.15803"
+         x="140.05675"
+         y="51.575981"
          id="tspan22" /><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.18492px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.163869"
-         x="126.44218"
-         y="50.289219"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.15803"
+         x="140.05675"
+         y="54.54258"
          id="tspan13">Datum:</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.18492px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.163869"
-         x="126.44218"
-         y="52.670784"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.15803"
+         x="140.05675"
+         y="57.509178"
          id="tspan53">  * Marlowe contract <tspan
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono Bold'"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono Bold';stroke-width:0.15803"
    id="tspan54">awaiting</tspan></tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.18492px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono Bold';stroke-width:0.163869"
-         x="126.44218"
-         y="55.052345"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono Bold';stroke-width:0.15803"
+         x="140.05675"
+         y="60.475777"
          id="tspan55">    user input</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.18492px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.163869"
-         x="126.44218"
-         y="57.43391"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.15803"
+         x="140.05675"
+         y="63.442375"
          id="tspan27">  * Marlowe interpreter state</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.18492px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.163869"
-         x="126.44218"
-         y="59.815472"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.15803"
+         x="140.05675"
+         y="66.408974"
          id="tspan28" /><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.18492px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.163869"
-         x="126.44218"
-         y="62.197033"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72165px;line-height:1.09;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.15803"
+         x="140.05675"
+         y="69.375572"
          id="tspan30">Value: Assets managed by Marlowe</tspan></text>
     <text
        xml:space="preserve"
@@ -189,25 +199,21 @@
        cy="53.520512"
        r="2.5532451"
        transform="rotate(-120.90848)" />
-    <g
-       id="g67"
-       transform="rotate(15.917972,111.97629,82.843126)">
-      <circle
-         style="fill:none;stroke:#000000;stroke-width:0.287997;stroke-dasharray:0.151479, 0.454437;stroke-dashoffset:0"
-         id="path19"
-         cx="-109.63479"
-         cy="95.083389"
-         r="23.362364"
-         transform="rotate(-120.90848)" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.163869px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.163869, 0.491607;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 111.97626,82.843123 149.89691,65.268762"
-         id="path20" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.158725px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.158725, 0.476175;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 108.44523,79.393159 6.08759,-36.779847"
-         id="path21" />
-    </g>
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.362023;stroke-dasharray:0.190415, 0.571244;stroke-dashoffset:0"
+       id="path19"
+       cx="-99.283119"
+       cy="145.05023"
+       r="29.367367"
+       transform="rotate(-104.99051)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264833px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.264833, 0.794498;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 110.9283,83.389072 49.59099,3.9259"
+       id="path20" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.211649px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.211649, 0.634948;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 109.55208,78.037548 141.8439,40.922213"
+       id="path21" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.132854;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.132854, 0.398562;stroke-dashoffset:0;stroke-opacity:1"
        d="m 99.835417,63.161236 c 0,0 2.830633,-0.859178 4.830143,-2.151512 1.84077,-1.189731 2.89267,-3.519416 3.70137,-6.918017"
