@@ -1,0 +1,7 @@
+.envrc
+.direnv/
+node_modules
+dist
+.next
+style.css
+out
