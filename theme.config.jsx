@@ -21,10 +21,10 @@ export default {
     </>
   ),
   logos: {
-    dark: "/logo-white.svg",
-    light: "/logo.svg",
+    dark: "/logo-full-white.svg",
+    light: "/logo-full-black.svg",
   },
-  readMore: 'Read More →',
+  readMore: 'Read\u00A0More\u00A0→',
   postFooter: null,
   darkMode: true,
   navs: [],

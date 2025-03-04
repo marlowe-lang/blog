@@ -1,0 +1,68 @@
+---
+title: "Building Marlowe-powered DApps: TypeScript SDK (beta version) and prototypes"
+date: 2024/01/03
+description: "Marlowe's mission is to simplify the developer experience of building smart contract-powered applications on Cardano"
+author: "Dominika Kusak"
+---
+
+Marlowe's mission is to simplify the developer experience of building smart contract-powered applications on Cardano. The Marlowe team is excited to introduce the [beta release](https://github.com/input-output-hk/marlowe-ts-sdk/discussions/113) of Marlowe TypeScript SDK (TS-SDK), DApp prototypes, and DApp components. The TS-SDK and the smart contract templates allow developers to easily integrate Marlowe contracts into their application workflows with familiar frameworks in React and TypeScript. The DApp prototypes and components take this one step further by providing examples of how contracts can be embedded within applications.
+
+Help the Marlowe team iterate the beta version by contributing to the [GitHub repo](https://github.com/input-output-hk/marlowe-ts-sdk/issues).
+
+## Why Marlowe TS-SDK?
+
+While [Marlowe Runtime](/blog/marlowe-runtime-on-demeter) already simplified developers' lives by replacing multiple tools with a REST interface, TS-SDK (beta) takes it a step further by lowering entry barriers for developers into Web3, facilitating quick onboarding, and enabling easy blockchain development. This approach simplifies the integration of Web3 components into traditional applications, mitigating EUTXO complexities, standardizing development processes, and facilitating easy incorporation of Marlowe smart contracts on any webpage.
+
+The TS-SDK (beta) contains the following packages:
+
+- [@marlowe.io/wallet](https://input-output-hk.github.io/marlowe-ts-sdk/modules/_marlowe_io_wallet.html) - Defines an API of what Marlowe needs from a wallet and provides a CIP-30 implementation.
+- [@marlowe.io/runtime-rest-client](https://input-output-hk.github.io/marlowe-ts-sdk/modules/_marlowe_io_runtime_rest_client.html) - 1-to-1 mapping of the Runtime REST API.
+- [@marlowe.io/runtime-lifecycle](https://input-output-hk.github.io/marlowe-ts-sdk/modules/_marlowe_io_runtime_lifecycle.html) - High-level API that captures the life of your contracts and builds upon the wallet and runtime-rest-client to solve common use cases.
+- [@marlowe.io/language-core-v1](https://input-output-hk.github.io/marlowe-ts-sdk/modules/_marlowe_io_language_core_v1.html) - Provides constructors and serialization utilities for the types defined in the Marlowe Core specification.
+- [@marlowe.io/adapter](https://input-output-hk.github.io/marlowe-ts-sdk/modules/_marlowe_io_adapter.html) - Supporting set of libraries for Marlowe and Runtime core domains.
+- [@marlowe.io/runtime-core](https://input-output-hk.github.io/marlowe-ts-sdk/modules/_marlowe_io_runtime_core.html) - Core domain concepts used throughout the runtime libraries.
+
+## Getting started
+
+To start working with the TS-SDK (beta), you need:
+
+- a URL to a running instance of the Marlowe Runtime ([Demeter](https://demeter.run/extensions/cardano-marlowe) is the simplest way to set this up)
+- a supported wallet extension (e.g. Lace, Nami, or Eternl) installed in your browser.
+
+Here's a short [demo](https://www.youtube.com/watch?v=0Qa1CsZUGnw) of how to get started with TS-SDK packages. For detailed technical information, dive deeper into [TS-SDK GitHub repo](https://github.com/input-output-hk/marlowe-ts-sdk/#readme).
+
+## Prototypes: DApp examples and components
+
+To illustrate the immense potential of TypeScript SDK and educate about the Marlowe features in a real-world setting, we're thrilled to unveil a series of example DApps and DApp components, that developers can explore on the Cardano testnet.
+
+Along the journey of building the TS-SDK, we realized that our ideas for Marlowe-powered DApps and DApp components could not only be sources of inspiration for DApp builders but also could be customized and integrated into community-built DApps and wallets – so we made them open source. They are open source under the Apache 2.0 license, which enables DApp builders to deploy them themselves, learn about potential design patterns, customize, and expand according to their business needs.
+
+These prototypes are just the beginning of what is possible using TypeScript SDK, and we encourage DApp builders to get inspired and create your own, custom DApps.
+
+## First prototype DApp component: Marlowe payouts
+
+The [payouts DApp component](https://payouts-preprod.prod.scdev.aws.iohkdev.io/) on testnet illustrates the withdrawal process for [role tokens](https://docs.marlowe.iohk.io/docs/developer-tools/ts-sdk/payouts-dapp-prototype#role-tokens) within Marlowe smart contracts. It simplifies users' ability to discover, track, and withdraw funds from contracts that utilize role tokens.
+
+### Why is this important?
+
+It showcases how DApp builders can simplify payout redemption from any Marlowe contract, serving as a first use of TS-SDK capabilities. While it may resemble a standalone DApp, it is a component that can be integrated in any end-user flow (e.g. in a wallet or an end-user application).
+
+To summarize, here are some possible ways of using this DApp component:
+
+- Easy tracking and withdrawal of role tokens. Users can efficiently explore and retrieve role tokens tied to Marlowe smart contracts, whether they are ada handles or domains, or custom tokens. The flexibility in usage allows diverse functionalities for these tokens.
+- Integration within DApps. DApp developers can employ the payouts DApp as a standalone application or integrate its functionality within a broader DApp to enhance its capabilities.
+- Wallet integration. This prototype can seamlessly integrate into wallets, enabling users to view and withdraw available role tokens directly from their wallet interfaces.
+
+Besides the payouts component, you can expect more of DApp examples and components to be released soon, so stay tuned!
+
+## Your role in shaping the future
+
+We invite you to test these prototypes and share your feedback and ideas. The above use cases are just the start. We aim to regularly provide the community with examples and components that will continue to simplify the Web3 DApp builders' journey. Learn how to simplify the smart contract and DApp development process with TS-SDK now!
+
+Have a specific feature in mind that you'd love to see in action? Your input matters – [share](https://github.com/input-output-hk/marlowe-ts-sdk/discussions) your ideas with us, and we'll gladly explore their potential for implementation.
+
+Delve into the [GitHub repository](https://github.com/input-output-hk/marlowe-ts-sdk/) and [Marlowe documentation](https://docs.marlowe.iohk.io/docs/developer-tools/ts-sdk/ts-sdk-intro) for details, and watch the latest [demo](https://www.youtube.com/watch?v=0Qa1CsZUGnw) showcasing the capabilities of the TS-SDK.
+
+Join us in revolutionizing DApp development on Cardano!
+
+*Special thanks to Omer Husain, Fernando Sanchez, and Olga Hryniuk, who contributed to this article!*

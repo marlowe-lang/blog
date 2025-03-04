@@ -2,13 +2,15 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@layer base {
-  @font-face {
-    font-family: Trueno Semibold;
-    font-weight: 400;
-    src: url(./fonts/Trueno Semibold.otf) format("opentype");
+/* Reset prose styles utility class */
+.nx-no-prose {
+  /* Reset prose-specific margins */
+  & h1, & h2, & h3, & h4, & h5, & h6,
+  & p, & ul, & ol, & li, & img {
+    @apply nx-mt-0;
   }
 }
+
 /*
 @import 'nextra/styles/variables.css';
 @import 'nextra/styles/code-block.css';
@@ -18,6 +20,13 @@
 @import 'nextra/styles/cards.css';
 */
 
+@layer base {
+  @font-face {
+    font-family: Trueno Semibold;
+    font-weight: 400;
+    src: url("/fonts/Trueno-Semibold.otf") format("opentype");
+  }
+}
 
 html {
   @apply nx-scroll-pt-5;
@@ -27,8 +36,14 @@ body {
   @apply nx-px-4;
 }
 
-article {
-  @apply nx-mx-auto nx-block nx-pt-20 nx-pb-32;
+/* Modify article styles to be more specific */
+article.nx-prose {
+  @apply nx-mx-auto nx-block nx-pt-8 nx-pb-32;
+}
+
+/* Regular articles without prose class won't get the default padding */
+article:not(.nx-prose) {
+  @apply nx-mx-auto nx-block;
 }
 
 article img {

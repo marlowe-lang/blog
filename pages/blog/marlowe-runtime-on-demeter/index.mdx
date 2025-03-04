@@ -1,0 +1,81 @@
+---
+title: "Marlowe Runtime on Demeter: the power of cloud-based infrastructure"
+date: 2023/07/12
+description: "Marlowe Runtime integration with Demeter's platform-as-a-service offering provides developers with seamless access to Cardano blockchain infrastructure"
+author: "Santiago Carmuega"
+---
+
+Marlowe's recent deployment to mainnet has been a significant milestone in the Cardano ecosystem, empowering developers to create, test, and deploy financial smart contracts with speed and ease.
+
+Marlowe is an open-source project. Anyone can build and run the required backend components, but if you want a quick and straightforward way to get started, leveraging Demeter's platform-as-a-service (PaaS) offering can be a game-changer.
+
+By using Demeter, you can bypass the need for local installations and the hassle of managing infrastructure. This PaaS gives you immediate access to Marlowe Runtime on reliable, robust, and hosted Cardano blockchain infrastructure, accelerating your entry into the world of smart contract creation and deployment.
+
+## About Marlowe Runtime
+
+Marlowe Runtime is the application backend for managing Marlowe contracts on the Cardano blockchain. It provides easy-to-use, higher-level APIs and complete backend services. Developers can leverage Marlowe Runtime without having to assemble the 'plumbing' that manually orchestrates a backend workflow for Marlowe-based applications.
+
+Running Marlowe Runtime requires an instance of the Cardano node, a PostgreSQL database instance, and a few Marlowe-specific processes. See the [official documentation](https://docs.marlowe.iohk.io/docs/developer-tools/runtime/marlowe-runtime) along with the [Deploying Marlowe Runtime tutorial](https://docs.marlowe.iohk.io/tutorials/playbooks/deploying-marlowe-runtime) for more details.
+
+Once everything's set up and running, you'll be able to interact with the Runtime environment using the Marlowe Runtime CLI, raw TCP sockets, or an HTTP REST API.
+
+## About Demeter.run
+
+Demeter.run is a cloud-based platform that offers hosted access to Cardano blockchain infrastructure. Developers get direct access to managed instances of the main open-source tools (Cardano node, DB-Sync, Ogmios, Kupo, Scrolls, Oura, and others) in the ecosystem.
+
+This means developers can take full advantage of Cardano's blockchain technology without having to set up and maintain their own infrastructure.
+
+Some of the benefits of using Demeter.run include the following:
+- Paying only for what you use
+- Not waiting for instances to sync  
+- Getting version upgrades and tech support
+
+## Marlowe Runtime + Demeter.run
+
+You can set up your self-hosted version of Marlowe Runtime, but using the instances already available in Demeter.run makes it much easier and faster. This deployment option eliminates the need for developers to manually set up and maintain their own infrastructure for running and managing Marlowe smart contracts.
+
+All you need to do to access Marlowe Runtime through Demeter.run is to enable the Marlowe Runtime extension in your project. This will provide you with a custom API endpoint that you can use to interact programmatically with Runtime.
+
+## Cost optimization
+
+Instances of Marlowe Runtime on Demeter.run are multi-tenant, which means that several projects will share the same set of existing instances. This approach significantly reduces the overall cost required for your project's infrastructure. With Demeter.run, you just pay for what you use, rather than paying for whole instances.
+
+The quality of service is not compromised in Demeter's multi-tenant instances. The infrastructure has been designed to scale horizontally, meaning that Demeter can spawn new instances if the API's load increases above a certain threshold.
+
+For very large projects that require fine-grained throughput control, Demeter.run offers the option of setting up "private clusters". This option allows deployment of your project on isolated and reserved computer resources serving as a single-tenant environment for your Marlowe Runtime instances.
+
+## Immediate access
+
+Similarly to many other Cardano tools, Marlowe Runtime requires an initial phase for syncing the chain's history. The sync time varies by network and hardware specs, and can take anywhere from a few hours to several days. Another great advantage of using Demeter.run is that you get immediate access to instances of a shared Cardano node that is already synced.
+
+## Fully managed
+
+Keeping infrastructure running and up to date is time consuming. Updating different components, database housekeeping, backup procedures, etc, adds a layer of complexity to the software development process.
+
+Demeter instances, including Marlowe Runtime instances, are fully managed. All day-2 operations are included as part of the platform service. This allows developers to focus on their core domain and move more rapidly in their development process.
+
+## Getting started with Demeter.run
+
+The Demeter.run project console displays all available extensions as a catalog of open-source tools that you can connect to your project.
+
+The Marlowe Runtime extension will show available API instances. Select the one matching the Cardano network you want to use in your project.
+
+Once you enable the extension, the Marlowe Runtime instance detail will show the API endpoints you need to integrate it with your code.
+
+By default, the endpoints provided are meant to be used by workloads running inside Demeter (eg hosted backend or a development workspace). If you wish to connect to Marlowe Runtime from outside the cluster, you can enable the "expose" toggle, which will give you a publicly accessible URL that you can use to interact with the REST API from an outside source.
+
+## Marlowe starter kit
+
+The [Marlowe starter kit](https://github.com/input-output-hk/marlowe-starter-kit) offers a step-by-step walkthrough to use Runtime.
+
+The repository includes a Jupyter Notebook with a great interactive tutorial explaining how to create simple contracts and how to interact with Runtime to execute them.
+
+Demeter.run is, again, a very easy way to access everything you need. The project console enables the creation of a new "workspace" where you'll find a web-based VSCode instance running in the cloud, featuring everything you need to code and run the starter kit repo.
+
+## Conclusion
+
+The integration of Marlowe Runtime with Demeter marks an exciting development for the Cardano ecosystem. Simpler and more efficient development and deployment of smart contracts empowers developers to unlock the full potential of the Cardano blockchain. Looking ahead, this is certain to stimulate further growth and innovation in the world of decentralized applications.
+
+If you have an idea of how to integrate Marlowe into your project or if you just want to explore how it works, make sure to apply for the "Gateway to Marlowe" grant. This grant will provide you with free Demeter Compute Units ("DCUs") to develop and deploy your idea on Demeter. The only requirement is to fill out our [enrollment form](https://demeter.run/contact?cat=grant_apply&type=grant_marlowe) telling us how you plan on using Marlowe. More details are also available on the [pricing page](https://demeter.run/pricing). If approved, we'll notify you and your granted DCUs will show up in your project's dashboard.
+
+Now is the perfect time for developers to start their journey with Marlowe and Demeter, and to explore the benefits this integration brings to the creation of smart contracts on Cardano.

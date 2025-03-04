@@ -1,0 +1,62 @@
+---
+title: "Introducing Marlowe Runner beta: smart contract deployment reimagined" 
+date: 2023/12/21
+description: "Marlowe Runner beta is now available for users to deploy instances of smart contracts on Cardano straight from the browser"
+author: "Omer Husain"
+---
+
+Marlowe Runner beta is now available for users to deploy instances of smart contracts on Cardano straight from the browser. Runner shows that it is possible to use smart contracts without specialized engineering skills, complex backend orchestration, or custom frontends. It's the first showcase of a paradigm shift in the journey of creating, deploying, and interacting with smart contracts – all from a browser.
+
+This blog post delves into Marlowe Runner's functionality, its benefits, and how it transforms the builder-user journey of deploying Marlowe contracts.
+
+## The importance of a simplified developer experience
+
+Even though the adoption of Cardano continues to grow across diverse use cases, the traditional barriers of deep programming knowledge and technical intricacies hinder rapid innovation and broader adoption.
+
+Marlowe Runner beta marks a pivotal advancement in the blockchain space, specifically addressing the complexity of smart contract deployment on Cardano. Paired with [Marlowe Playground](https://play.marlowe.iohk.io/), Runner simplifies contract creation, deployment, and execution. This empowers a wider range of creators, including traditional developers, builders, and domain experts to rapidly prototype, simulate, and run smart contracts, which dramatically accelerates time-to-market. Marlowe Runner exemplifies that it is possible to dramatically reduce the burden of building software in Web3 by providing builder-friendly tools that simplify and inspire a wide array of smart contract-based applications.
+
+## What is Marlowe Runner?
+
+Marlowe Runner beta is a tool for interacting with smart contracts and deploying them on Cardano directly from the browser, eliminating the need for backend setup or programming knowledge. Whether you're a seasoned DApp builder, or just starting your journey with smart contracts, Marlowe Runner is a great tool for builders to experiment with.
+
+Runner enables creators to quickly prototype and test their contracts before embarking on the resource-intensive task of building a custom DApp from scratch. For those well-versed in PureScript, the Runner source code (which is fully open source) can serve as a valuable resource for borrowing components for other types of DApps. It's also possible to deploy your smart contracts with Runner and create a different DApp (UX) for interacting with the same contract. The Runner just scratches the surface of simplifying the prototyping journey and we're excited to see how it is used by the community!
+
+## How to start experimenting with Marlowe Runner?
+
+[Marlowe Runner beta](https://www.youtube.com/watch?v=B5XcH0j7Y7w) is now available on Cardano [preview](https://preview.runner.marlowe.iohk.io/) and [pre-production](https://preprod.runner.marlowe.iohk.io/) testing environments. To get started:
+
+- Open Marlowe Playground and build a contract or open and adjust the default example.
+- Send the new contract to the simulator and export it to Runner, where you will be prompted to specify the network you want to work with.
+- Connect a wallet (eg Lace, Nami, Eternl, etc) that is on the same network, and have your password details available so you can sign transactions with your wallet. You will also need to have any required tokens or funds available in your wallet.
+
+### Key features
+
+- Roles. When a role-using contract is submitted, Runner will prompt the user to specify the address for each role as a condition for deploying the contract.
+- Minting role tokens. Runner will mint the role tokens required by the contract. Role tokens are a form of security and validation used as evidence that a particular participant is authorized to play a specific role in a smart contract. Whoever has the tokens will be authorized to be a party to that contract.
+- Source graph view. Runner allows viewing contract DApps from the TS-SDK, Haskell, PureScript, or other languages, which is useful for analyzing the contract's logic in the 'Source' graph view.
+- Advancing the contract. Action buttons activate based on available actions for the user's contract role. Inactivity indicates the contract state awaiting action from another party.
+- Deposits and choices. Choices and fund deposits depend on contract conditions and the user's assigned role.
+- Withdrawal. Runner displays withdrawal options for ada or other tokens within contracts. Withdrawals require an authorized wallet and signature.
+- State. Marlowe contract states are determined by inputs, enhancing comprehension and predictability of the contract's behavior.
+
+### Deploying a Marlowe contract with Runner
+
+Explore the streamlined process of contract deployment:
+
+![Deploying a Marlowe contract using Runner beta](https://cdn.sanity.io/images/cogl778i/production/bc22a41063080db4175c28c5f0f0279c12066201-3840x6110.png?w=3840)
+
+## Use case scenario
+
+Imagine a scenario where several parties come together to jointly purchase a valuable non-fungible token (NFT), with an option for one party to buy it from the others. With Marlowe, you can create and simulate this complex contract's functionality in the Playground. You can ensure the contract's parameters make logical sense, such as verifying if the end date is in the past or other conditions. You can also use the static analysis tools to test for errors. Once your contract is ready, you can navigate to Marlowe Runner beta and submit it for execution.
+
+Each user can access and validate the contract if it includes their addresses or if their wallet contains one of its role tokens, for instance. Collaborators can then interact with the on-chain contract directly through Runner, facilitating a transparent and efficient validation process.
+
+To redeem funds from such contracts, Marlowe will offer a payouts DApp prototype. Stay tuned for upcoming blog posts about its functionality and documentation overview.
+
+## Conclusion
+
+Marlowe Runner beta transforms smart contract development by simplifying the deployment process and prioritizing programming logic over technical complexities.
+
+Test [Marlowe Runner](https://preprod.runner.marlowe.iohk.io/) beta now. Your feedback is crucial in shaping the roadmap for this endeavor. Join our [Discord community](https://discord.com/channels/826816523368005654/936295815926927390) to share insights on functionality and desired UI improvements. Explore the [repository](https://github.com/input-output-hk/marlowe-runner), watch the [demo](https://www.youtube.com/watch?v=B5XcH0j7Y7w), and follow the guide within Marlowe Runner to contribute to the future of Cardano development.
+
+*Dominika Kusak, Olga Hryniuk, Hans Lahe, and Joseph Fajen contributed to this blog post.*

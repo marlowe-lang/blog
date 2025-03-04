@@ -34,8 +34,8 @@ export function PostsLayout({
     const description = post.frontMatter?.description
 
     return (
-      <div key={post.route} className="post-item nx-mb-16">
-        <h2 className="nx-mt-0 nx-text-2xl">
+      <div key={post.route} className="post-item nx-mb-14 max-md:nx-mb-10">
+        <h2 className="nx-mt-0 nx-mb-3 nx-text-xl md:nx-text-2xl">
           <Link href={post.route} passHref legacyBehavior>
             <a className="!nx-no-underline nx-font-bold">{postTitle}</a>
           </Link>
@@ -45,25 +45,29 @@ export function PostsLayout({
             {description}
             {config.readMore && (
               <Link href={post.route} passHref legacyBehavior>
-                <a className="nx-not-italic post-item-more nx-ml-2">{config.readMore}</a>
+                <a className="nx-text-gray-900 dark:nx-text-gray-200 nx-underline hover:nx-text-black dark:hover:nx-text-white nx-ml-2 nx-not-italic">{config.readMore}</a>
               </Link>
             )}
           </p>
         )}
-        {date && (
-          <time
-            className="nx-text-sm dark:nx-text-gray-400 nx-text-gray-600"
-            dateTime={date.toISOString()}
-          >
-            {date.toDateString()}
-          </time>
-        )}
+        <div className="nx-not-prose nx-flex nx-flex-wrap nx-items-center nx-text-sm dark:nx-text-gray-400 nx-text-gray-600">
+          <div className="nx-flex nx-items-center nx-gap-1">
+            {post.frontMatter?.author}
+            {post.frontMatter?.author && date && ','}
+            {date && (
+              <time
+                dateTime={date.toISOString()}
+              >
+                {date.toDateString()}
+              </time>
+            )}
+          </div>
+        </div>
       </div>
     )
   })
   return (
-    <BasicLayout>
-      {/* <MDXTheme>{children}</MDXTheme> */}
+    <BasicLayout wrapInArticle={false}>
       {postList}
     </BasicLayout>
   )

@@ -1,0 +1,132 @@
+---
+title: "Marlowe goes live: be the first to explore the power of Marlowe's smart contract toolset"
+date: 2023/06/01
+description: "Now that Marlowe has been audited and deployed to the Cardano mainnet, it's the perfect opportunity for early adopters to begin exploring and testing Marlowe's high-assurance capabilities."
+author: Fernando Sanchez
+---
+
+Now that Marlowe has been audited and deployed to the Cardano mainnet, it's the perfect opportunity for early adopters to begin exploring and testing Marlowe's high-assurance capabilities.
+
+Marlowe offers developers intuitive solutions to create, test, deploy, and monetize secure smart contracts with ease, empowering users to unlock the full potential of decentralized applications (DApps).
+
+This initial deployment serves multiple purposes: gather information about the user experience, give developers a chance to share their insights about the documentation experience, and propose new use case ideas and tooling enhancement suggestions, among others.
+
+This is also the perfect time to delve into what Marlowe is, the problems that it solves, its components and key benefits, and the range of potential use cases that Marlowe can be applied to.
+
+The Marlowe journey starts here.
+
+## The power of Marlowe
+
+Marlowe creates much value for Cardano, and the blockchain ecosystem at large, by providing a toolset to create smart contracts with speed and ease. Marlowe's suite empowers developers and builders to intuitively create, test, deploy and integrate smart contracts on Cardano within DApps and platforms. Later iterations will see partnerships with third-party providers that will enable low-code tooling for deploying and running the smart contracts.
+
+## What is Marlowe?
+
+Marlowe is a domain-specific language (DSL) and a set of tools to build and run smart contracts. Users do not need to understand programming, nor the technicalities of a DSL to use Marlowe.
+
+Marlowe enables developers to create, test, and deploy smart contracts safely, simply, and intuitively. The language is designed for simplicity from the ground up. Marlowe reduces the burden of building smart contracts by removing the need to understand the complexities of smart contract languages.
+
+## Product features
+
+The deployment of Marlowe onto the mainnet includes the following features:
+
+- Marlowe language (see definition above)
+- [Marlowe Playground](https://play.marlowe.iohk.io/#/)
+- [Marlowe Runtime](https://docs.marlowe.iohk.io/docs/developer-tools/runtime/marlowe-runtime)
+- [Marlowe Runtime APIs](https://docs.marlowe.iohk.io/docs/developer-tools/runtime/runtime-rest-api)
+- [Marlowe CLI](https://docs.marlowe.iohk.io/docs/developer-tools/marlowe-cli)
+- [Marlowe starter kit repository](https://github.com/input-output-hk/marlowe-starter-kit) with tutorials
+- [Demeter Run](https://demeter.run/) integration
+- Updated Marlowe website includes expanded and [integrated documentation site](https://docs.marlowe.iohk.io/docs/introduction)
+
+### Marlowe Playground
+
+Marlowe Playground allows testing smart contracts before deployment to ensure the code behaves only as intended – this is one of Marlowe's core design features. All contracts can be tested on the [Playground](https://play.marlowe.iohk.io/#/), a simulator that enables builders to experiment with Marlowe contracts while focusing on the contract's process logic, rather than the actual contract code.
+
+The Playground enables contract builders to simulate contract behavior, so that potential users can walk through different ways in which the contracts will evolve, according to different actions taken by the participants.
+
+Within the Playground, users can write contracts in Haskell, Typescript, or Marlowe, but people without coding experience will likely start by familiarizing themselves with the Blockly visual editor. The initial deployment enables users to play around with some of the pre-built templates. As Marlowe experts grow in numbers, more templates will gradually be added to the ecosystem, empowering non-coders to use Marlowe too.
+
+#### Marlowe contract templates
+
+Contract builders can use customizable, reusable, and ready-made contract templates to start creating right away.
+
+The [Marlowe starter kit repository](https://github.com/input-output-hk/marlowe-starter-kit) includes three on-chain example contracts (zero-coupon bond, escrow, and swap contract) and the instructions for setting up a suitable ecosystem to run them.
+
+### Marlowe Runtime
+
+Marlowe Runtime is the application backend for managing Marlowe contracts on the Cardano blockchain. It provides easy-to-use, higher-level APIs and complete backend services that enable developers to build and deploy enterprise and Web3 DApp solutions using Marlowe, but without having to assemble the 'plumbing' that manually orchestrates a backend workflow for a Marlowe-based application.
+
+Marlowe has a refined view of the Cardano ledger model. The job of Runtime is to map between the Marlowe conceptual model and the Cardano ledger model in both directions. Runtime takes commands relevant to Marlowe ledger and maps them to Cardano ledger. This can also be done with the REST API.
+
+Primarily, Runtime enables users to do two types of things:
+
+- Discover and query on-chain Marlowe contracts
+- Create Marlowe transactions
+
+### Runtime deployment options
+
+Runtime backend services can be deployed in one of three ways:
+
+1. Through Docker
+2. Through the cloud-hosted Runtime extension in demeter.run
+3. Through manual deployment using a set of Runtime executables.
+
+Using the cloud-hosted Runtime extension in demeter.run greatly simplifies access to the Runtime backend services, making running and deploying smart contracts on Cardano much easier.
+
+Future Marlowe deployments will use low-code tooling to simplify the integration of contracts into decentralized applications (DApps), business apps, or web pages.
+
+### Documentation page with tutorials
+
+The Marlowe documentation is now significantly expanded, updated, and integrated into the updated Marlowe website, with access to all the documentation through a single URL. The new documentation site includes many examples, written tutorials, video tutorials, and documentation of Marlowe developer tools. It offers documentation about deployment options, the Playground, Runtime protocol reference, Runtime REST API, CLI reference, developer resources, and a method to contact the Marlowe team for support questions and feedback.
+
+### Security guardrails
+
+The creation of smart contracts on other chains requires deep programming expertise and a thorough understanding of blockchain code. This immediately burdens the smart contract creator with the responsibility of ensuring the contract's code is good to avoid unintended consequences. Even so, bugs or flaws in the coding can have disastrous consequences. With this in mind, Marlowe has been designed with safety as a top priority.
+
+Marlowe leverages Plutus' power and security features, with some additional safety measures added to ensure a safe and secure smart contract experience. Both Input Output Global (IOG) and an external firm have performed enterprise-grade audits, both static and dynamic. This means that the need for individual contract auditing is significantly reduced, saving time and resources. An upcoming blogpost will delve into the auditing issue in more detail.
+
+Marlowe contracts can be modeled using the Algorithmic Contract Types Unified Standard ([ACTUS](https://www.actusfrf.org/)), which means that smart contracts developed with Marlowe comply with any standardized financial contract specification.
+
+### Intuitive
+
+Marlowe offers compatibility with popular programming languages such as JavaScript, Typescript, and Haskell. This compatibility means that developers find a very intuitive way to create, integrate, and deploy contracts right out of the box.
+
+The Playground accentuates Marlowe's intuitiveness by offering a visual way to write and simulate contract behavior through the Blockly visual editor, fitting together blocks that represent different contract components. If you try to put a block into the wrong place, it simply won't fit.
+
+### Marlowe use cases
+
+Marlowe aims to become a smart contract primitive powering a large and diverse set of use cases across multiple industries and verticals. See the [contract gallery](https://docs.marlowe.iohk.io/docs/examples/examples-contract-gallery) and the [Marlowe starter kit repository](https://github.com/input-output-hk/marlowe-starter-kit) for examples.
+
+The initial iteration is primarily built for financial contracts, but Marlowe's design allows for tweaking and adjustment to use the language for writing many other contract types.
+
+### Expressive
+
+Marlowe is a particularly powerful language that can express contracts on top of account-based chains and also on [EUTXO](https://www.essentialcardano.io/glossary/eutxo) accounting models. Leveraging Cardano's EUTXO model enables a high degree of expressiveness for Marlowe contracts.
+
+## Conclusion
+
+The Marlowe journey is just beginning.
+
+As a developer, all the product features are now at your disposal to create and build smart contracts with ease, and contribute to growing Marlowe's value for the developer community, and the Cardano ecosystem as a whole.
+
+### Key takeaways
+
+Marlowe:
+
+- is now available on mainnet
+- is a DSL that includes a web-based platform to create and simulate smart contracts visually
+- reduces the burden of building smart contracts by removing the need to understand the complexities of smart contract languages
+- makes constructing smart contracts more accessible to developers
+- leverages Plutus' power and security features
+- has undergone static and dynamic audits
+- has a brand new, purpose-made, integrated documentation site
+- contracts can be written in JavaScript/TypeScript or Haskell
+- can express contracts on top of account-based chains and also on EUTXO accounting models
+
+## Start your journey today and stay up to date with all things Marlowe
+
+Today's the perfect day to start your Marlowe journey. Visit the [new website](../index.html), check out the FAQs, [submit feedback](https://iohk.zendesk.com/hc/en-us/requests/new), and stay up to date with all things Marlowe through dedicated social media channels.
+
+Cardano developers, this is your chance to be the first test-driving Marlowe. Share your ideas for improvements, tooling, use cases, educational initiatives, partnerships, etc. [through this link](https://iohk.zendesk.com/hc/en-us/requests/new).
+
+Start building and using [Marlowe smart contracts](https://docs.marlowe.iohk.io/docs/introduction) today.

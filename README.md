@@ -1,9 +1,20 @@
 # Marlowe Blog
 
-```
+## Writing a New Post
+
+Writing with live preview:
+
+```bash
 $ nix develop
+$ pnpm install
 $ pnpm run dev
 ```
+
+The preview by default is available at `http://localhost:3000`.
+
+## Publishing a New Post
+
+TODO
 
 ## Repo and Process Overview
 

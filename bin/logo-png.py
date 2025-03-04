@@ -35,7 +35,7 @@ def modify_svg(svg_path, size, margin_percentage):
 
 def main():
     args = parse_args()
-    modified_svg_path = modify_svg('./public/logo.svg', args.size, args.margin)
+    modified_svg_path = modify_svg('./public/logo-black.svg', args.size, args.margin)
 
     # Run inkscape command to generate the PNG
     output_filename = f'logo-{args.size}.png'

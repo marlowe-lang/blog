@@ -1,0 +1,123 @@
+---
+title: Tools
+description: "Create and execute smart contracts in minutes"
+type: index
+---
+
+import { ToolImage } from './image'
+
+export function ToolItem({ title, description, features, link, linkText, imageSrc, imageAlt }) {
+  return (
+    <div className="nx-flex nx-flex-col md:nx-flex-row nx-gap-6 nx-items-start nx-mt-8 [&_h3]:nx-mt-0 [&_p]:nx-mt-0 [&_ul]:nx-mt-0">
+      <div className="nx-flex-1">
+        <h3 className="nx-mb-4">{title}</h3>
+        <p className="nx-mb-4">{description}</p>
+        <ul className="nx-mb-4">
+          {features.map((feature, index) => (
+            <li key={index}>{feature}</li>
+          ))}
+        </ul>
+        <div className="nx-mt-0">
+          <a href={link}>{linkText}</a>
+        </div>
+      </div>
+      <div className="nx-flex-1 nx-mt-0">
+        <ToolImage 
+          src={imageSrc}
+          alt={imageAlt}
+        />
+      </div>
+    </div>
+  )
+}
+
+# Marlowe
+
+## Why Marlowe?
+
+<div className="nx-no-prose nx-flex nx-flex-col md:nx-flex-row nx-gap-6 nx-items-start nx-mt-8 [&_h3]:nx-mt-0 [&_p]:nx-mt-0 [&_ul]:nx-mt-0">
+<div className="nx-flex-1">
+
+- **Accessible & Flexible**:
+  With a low barrier to entry and dedicated libraries for [TypeScript](https://github.com/marlowe-lang/marlowe-ts-sdk), [Rust](https://github.com/OlofBlomqvist/marlowe-rs) and others, Marlowe lets you quickly learn and create smart contracts on the fly.
+
+- **Built-In Security**:
+  Marlowe’s comprehensive validation tools and inherent safety features significantly reduce audit overhead, making it a secure choice for DApp development and implementation of financial smart contracts.
+
+- **Seamless Integration**:
+  Our Runtime abstracts the complexities of the Cardano UTxO model, ensuring smooth deployment and easy interaction with your contracts.
+</div>
+<div className="nx-flex-1"><ToolImage src="/imgs/blog/marlowe-graph.png" alt="Marlowe Execution Graph" /></div>
+</div>
+
+## Tools
+
+Marlowe provides a comprehensive suite of tools for smart contract development and deployment:
+
+export function MarloweTools() {
+  const tools = [
+    {
+      title: "Playground",
+      description: "Create and test smart contracts in a visual environment. Perfect for both beginners and experienced developers:",
+      features: [
+        "Design with JavaScript, Haskell, Blockly, or Marlowe",
+        "Test and simulate contract execution",
+        "Validate your contracts before deployment"
+      ],
+      link: "https://playground.marlowe-lang.org/#/",
+      linkText: "Try Playground →",
+      imageSrc: "/imgs/blog/playground.png",
+      imageAlt: "Marlowe Playground Interface"
+    },
+    {
+      title: "TypeScript SDK",
+      description: "Integrate Marlowe contracts into your applications:",
+      features: [
+        "TypeScript SDK for application integration"
+      ],
+      link: "https://github.com/input-output-hk/marlowe-ts-sdk/tree/main",
+      linkText: "Explore SDK →",
+      imageSrc: "/imgs/blog/ts-sdk.png",
+      imageAlt: "Marlowe TypeScript SDK"
+    },
+    {
+      title: "Runtime",
+      description: "Integrate Marlowe contracts into your applications:",
+      features: [
+        "Runtime services for backend support",
+        "Comprehensive API access"
+      ],
+      link: "https://github.com/input-output-hk/marlowe-ts-sdk/tree/main",
+      linkText: "Explore SDK →",
+      imageSrc: "/imgs/blog/runtime.png",
+      imageAlt: "Marlowe Runtime"
+    },
+    {
+      title: "Runner",
+      description: "Deploy and execute your contracts on Cardano with minimal effort:",
+      features: [
+        "Easy deployment process",
+        "Monitor contract execution",
+        "Manage contract interactions"
+      ],
+      link: "https://preprod.runner.marlowe-lang.org/",
+      linkText: "Use Runner →",
+      imageSrc: "/imgs/blog/runner.png",
+      imageAlt: "Marlowe Runner Interface"
+    }
+  ]
+
+  return (
+    <>
+      {tools.map((tool, index) => (
+        <ToolItem key={index} {...tool} />
+      ))}
+    </>
+  )
+}
+
+<div className="nx-no-prose">
+  <MarloweTools />
+</div>
+
+See our [documentation](https://docs.marlowe.iohk.io) to get started!

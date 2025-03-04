@@ -10,7 +10,7 @@ export const ArticleLayout = ({ children }: { children: ReactNode }) => {
     <BasicLayout>
       <Meta />
       <MDXTheme>
-        <h1 className="nx-font-cardano nx-text-neutral-700 nx-text-3xl">{opts.title}</h1>
+        <h1 className="nx-font-cardano nx-text-3xl">{opts.title}</h1>
         {children}
         {config.postFooter}
         {config.comments}

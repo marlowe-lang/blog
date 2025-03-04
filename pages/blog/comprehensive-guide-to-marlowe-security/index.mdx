@@ -1,0 +1,40 @@
+---
+title: "A comprehensive guide to Marlowe's security: audit outcomes, built-in functional restrictions, and ledger security features"
+date: 2023/06/27
+description: "Learn about what makes Marlowe a secure smart contract development platform"
+author: "Fernando Sanchez"
+readingTime: "28 min"
+---
+
+*Disclaimer: The content in this Marlowe Security article is provided "AS IS" with no guarantees of any kind. Nothing in this document is intended to be professional advice, including without limitation, financial, investment, legal, or tax advice. Input Output Global is not responsible for your use of or reliance on any information in this document.*
+
+**Learn about what makes Marlowe a secure smart contract development platform**
+
+## Introduction
+
+In most blockchains, a smart contract is a computer program that self-executes once certain predefined conditions are met. In Cardano, it's a little different, as smart contract execution happens in a transaction submitted externally to the Cardano node. But irrespective of how it works under the hood, smart contracts are useful for many industries: financial, real estate, commerce, and many others.
+
+Transactions using smart contracts may involve the movement and transfer of substantial value, which may be a prized target for bad actors. Equally, this value may become locked, or be lost altogether, due to flaws or vulnerabilities in the coding.
+
+Avoiding any undesired outcome requires the implementation of a robust security framework, which involves a combination of design principles, audits, and best practices by developers, exchanges, and any other parties handling smart contracts.
+
+Adding to an ever-growing range of resources from across Cardano's technical community, Marlowe is an ecosystem of tools and languages created by Input Output Global (IOG) to enable development of financial and transactional smart contracts on the Cardano blockchain.
+
+The Marlowe suite has been designed and developed with a security-centric focus. Marlowe's creators have built in functional limitations that ensure that contracts are finite and always terminate, for example. Marlowe also avoids certain programming constructs to prevent undesired outcomes, eg recursion and looping. A third party, [Tweag](https://www.tweag.io/), conducted a [static and dynamic audit](https://github.com/tweag/tweag-audit-reports/blob/main/Marlowe-2023-03.pdf) prior to Marlowe's deployment on mainnet. The result of all these security features, and many others, is a safe and secure smart contract creation and development platform.
+
+This article delves into Marlowe's security, explaining the findings of the security audit, and [how the team responded to them](https://github.com/input-output-hk/marlowe/blob/master/response-to-audit-report.md), built-in functional limitations, security analysis tools included in the deployment, and some precautions and considerations that must be taken when using Marlowe.
+
+## Structure of this document
+
+This document is divided into six clearly defined sections:
+
+1. Smart contract auditing
+2. Smart contract-based attacks  
+3. Tweag audit
+4. Built-in security-enhancing functional limitations in Marlowe
+5. Transaction validation
+6. Monetary policies
+
+As a whole, this document intends to provide a comprehensive understanding of the importance of smart contract auditing and the different types of smart contract-based attacks that exist today, before delving specifically into how the Marlowe suite of tools utilizes auditing and strong security principles to maintain a safe and secure smart contract development environment.
+
+[View full article on GitHub](https://github.com/input-output-hk/marlowe/blob/master/docs/security-audit.md)

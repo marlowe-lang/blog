@@ -1,0 +1,52 @@
+---
+title: "Lower Marlowe execution costs"
+date: 2024/01/25
+description: "Recent improvements in the efficiency of Marlowe's Plutus validator resulted in significantly lower execution costs"
+author: "Brian Bush"
+---
+
+Recent improvements in the efficiency of Marlowe's Plutus validator resulted in significantly lower execution costs for Marlowe smart contract transactions on the Cardano blockchain. This has two important implications for Marlowe's users, contract designers, and DApp developers:
+
+1. Marlowe transactions now have lower fees and can now include more complex logic than before. A new version of the PlutusTx compiler reduces execution costs of Marlowe contracts by more than 20%.
+
+2. Beyond that, judicious employment of the new `PlutusTx.AsData` Haskell module in the source code for Marlowe's semantics validator provides another 25% reduction for typical Marlowe contracts. Specializing how the validator compares multi-asset values further reduces costs for contracts involving native tokens.
+
+These revisions to Marlowe's semantics validator do not trigger a new external audit. Beyond these cost-reducing optimizations, expert developers can optionally customize the validator to turn off some of the redundant pre- and post-condition checks it performs. Altogether, these updates enable one to do more with Marlowe at a lower cost.
+
+## Need for reducing execution costs
+
+Like all other smart contract validators on Cardano, Marlowe validators are subject to the ledger rule that limits the amount of computation that can occur in a single Plutus transaction. The current rules limit transactions to fourteen million Plutus memory units and ten billion Plutus step (CPU) units. The Marlowe language imposes no limits on the number of logical, arithmetic, and bookkeeping computations in a Marlowe contract or in a Marlowe transaction, therefore, there will always be situations where a contract might try to perform more computation than is allowed in a Cardano transaction. Our blog post on Marlowe safety provides examples of this, and the Marlowe Best Practices Guide suggests design patterns for contracts that stay under these execution-cost limits. Consequently, making the Marlowe validator more efficient will leave room for doing more computation in every Marlowe transaction if a contract requires it. That extra "computation budget" enables more complex contracts to:
+
+- manage more accounts in Marlowe's internal state
+- pay more parties at once
+- perform more actions in a single transaction
+- do more elaborate arithmetic and logical calculations
+- make more choices or assign more variables over the lifetime of a contract.
+
+## New efficiencies in Marlowe
+
+The latest revision of Marlowe's semantics validator includes several updates that improve its efficiency. Some of these changes reduce the cost of all Marlowe transactions, while others target "hot spots" in the Marlowe validator where it was formerly particularly expensive in certain situations.
+
+Compiling the Marlowe validator using the PlutusTx version 1.15.0.0 compiler provides out-of-the-box improvements to all Marlowe contracts. That PlutusTx release incorporates lessons learned in the Alonzo and Babbage eras for optimizing the compilation of Plutus code written in Haskell (like Marlowe) into efficient Untyped Plutus Core (UPLC) that is executed when Cardano nodes validate transactions.
+
+As illustrated in the histogram below, for a randomly selected representative example of one hundred Marlowe transactions, we see a minimum memory-cost reduction of 23%, but with more than 30% reductions in some cases. The reduction in step cost is similar.
+
+![measured memory benchmark](https://cdn.sanity.io/images/cogl778i/production/9f4d6e44f0ec33cabbfeba0d5c150cc43d6004b0-3840x2627.png?w=3840)
+
+The latest Plutus libraries also contain a new `PlutusTx.AsData` module that contains Template Haskell (TH) code for creating algebraic data types (ADTs) as `Data` objects in Plutus Core, as opposed to sums-of-products terms. Plutus's `AsData` capabilities are evolving and may eventually include PlutusTx types such as `Map` and `ScriptContext`, which may lead to even greater performance improvement. Wrapping one of Marlowe's key ADTs, `Case`, with the `asData` TH function provides some dramatic improvements in the deserialization that converts the ledger's raw bytes representing a Marlowe contract or an action upon it into the semantically meaningful data structures of the Marlowe language. The two "flame graphs'' below, obtained using [Plutus's profiling tools](https://plutus.readthedocs.io/en/latest/howtos/profiling-scripts.html), for an example Marlowe transaction, show how the "mountain" (1a) of deserialization code on the left side of the leftmost graph (where `asData` is not employed) becomes a small "hill" (1b) in the rightmost graph (where `asData` is employed). Other details on the graphs show the sequence of function calls and costs within the UPLC. The benefits of `asData` depend both upon the Plutus implementation of Marlowe and the specific Marlowe contract being executed. Although at the start of the profile it shrank the mountain into a small hill, it did create extra overhead in later parts of the profile. In general, `asData` pushes the burden of a computation nearer to where a value is used, in a crude sense making the evaluation less strict and more lazy.
+
+![memory usage before optimization](https://cdn.sanity.io/images/cogl778i/production/a8b632fb29b3ae78a51c5ff641f62344a8fb5156-3840x1487.png?w=3840)
+
+![memory usage after optimization](https://cdn.sanity.io/images/cogl778i/production/ba4c9313870c037dab5796c0b1917594a1b3d9b9-3840x1695.png?w=3840)
+
+Larger contracts with more possible actions tend to benefit more from this optimization, and some transactions benefit very little from it. Typically, the cost reduction is between 10% and 50%.
+
+Checking the validity of a Marlowe transaction that involves several Cardano native assets involves a lot of comparisons of native assets' identifiers and quantities to ensure the smart contract's security and correct operation. Cumulatively, these comparisons, which correspond to the second and the last of the "hills" (2a and 2b) in the flame graphs above, can be quite expensive. Many Marlowe contracts pay single assets at a time, so this optimization replaces some of the extensive checking with simpler checking in those single-asset cases. A straightforward revision to Marlowe's semantics validator takes advantage of this special case by doing the cheaper comparison in situations where it applies. For the benchmark cases, this results in an average cost reduction of about 4%, but there are quite a few of the benchmarks where the reduction is twice that.
+
+The computational efficiencies listed above also happen to reduce the size of the Marlowe validator from approximately 12 kilobytes to 11 kilobytes. That reduces the amount of ada stored in the reference UTXO that holds the on-chain version of the Marlowe validator.
+
+## Overall impact
+
+Combined, the latest revisions to the Marlowe validator improve its worst-case performance by 15% and its typical performance by 50% without sacrificing security. The plots below show (on a logarithmic scale) the memory cost before (horizontal axis) and after (vertical axis) the revisions, relative to the protocol limits, for the one hundred benchmark Marlowe transactions. The vertical and horizontal lines at 1.0 show the protocol limits. Transactions above or rightward, respectively, of these lines are too costly to execute on the main network. Because all points fall below the diagonal line, all transactions are cheaper with the revised validator. The points near the diagonal line represent transactions with relatively minor improvements, whereas the points far to the right of the diagonal line represent dramatic improvement. The points right of the red vertical line represent formerly impossible transactions but are now possible within the ledger limits. The new Marlowe validator is available in Marlowe Runtime version 1.0.0.
+
+![original validators fraction of Plutus memory](https://cdn.sanity.io/images/cogl778i/production/356457dd3d9050fd508f0416799452a384fa5e1b-3840x2399.png?w=3840)

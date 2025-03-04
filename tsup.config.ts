@@ -4,7 +4,7 @@ export default defineConfig({
   entry: ['theme/index.tsx', 'theme/tags.tsx'],
   format: 'esm',
   dts: true,
-  name: 'cardano-lightning-network-theme',
+  name: 'marlowe-lang-theme',
   outExtension: () => ({ js: '.js' }),
   external: ['nextra']
 })
