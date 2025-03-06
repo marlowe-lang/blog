@@ -24,9 +24,10 @@ export default function Nav(): ReactElement {
     }
     return false
   }
+  const linkBaseClass:string = 'nx-text-gray-600 hover:nx-text-gray-800 dark:nx-text-gray-400 dark:hover:nx-text-gray-200';
 
   const linkClass = (checkPath: string) => 
-    `nx-text-gray-600 hover:nx-text-gray-800 dark:nx-text-gray-300 dark:hover:nx-text-gray-150 ${
+    `${linkBaseClass} ${
       isActive(checkPath) ? 'nx-font-bold dark:nx-text-gray-100 nx-text-black' : ''
     }`
 
@@ -36,17 +37,17 @@ export default function Nav(): ReactElement {
         href="https://docs.marlowe-lang.org" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="nx-text-gray-600 hover:nx-text-gray-800 dark:nx-text-gray-400 dark:hover:nx-text-gray-200"
+        className={linkBaseClass}
       >
         Documentation
       </a>
 
-      <a
+      <Link
         href="/"
         className={linkClass('/')}
       >
         Tools
-      </a>
+      </Link>
 
       <Link href="/blog" className={linkClass('/blog')}>
         Blog

@@ -14,3 +14,5 @@ export function ToolImage({ src, alt }: ToolImageProps) {
     />
   );
 }
+
+export default ToolImage;
