@@ -6,9 +6,11 @@ type: index
 
 import { ToolImage } from './image'
 
-export function ToolItem({ title, description, features, link, linkText, imageSrc, imageAlt }) {
+export function ToolItem({ title, description, features, link, linkText, imageSrc, imageAlt, imagePosition='right' }) {
   return (
-    <div className="nx-flex nx-flex-col md:nx-flex-row nx-gap-6 nx-items-start nx-mt-8 [&_h3]:nx-mt-0 [&_p]:nx-mt-0 [&_ul]:nx-mt-0">
+    <div className={`nx-flex nx-flex-col md:nx-flex-row nx-gap-6 nx-items-start nx-mt-8 [&_h3]:nx-mt-0 [&_p]:nx-mt-0 [&_ul]:nx-mt-0 ${
+      imagePosition === 'left' ? 'md:nx-flex-row-reverse' : ''
+    }`}>
       <div className="nx-flex-1">
         <h3 className="nx-mb-4">{title}</h3>
         <p className="nx-mb-4">{description}</p>
@@ -21,6 +23,7 @@ export function ToolItem({ title, description, features, link, linkText, imageSr
           <a href={link}>{linkText}</a>
         </div>
       </div>
+
       <div className="nx-flex-1 nx-mt-0">
         <ToolImage 
           src={imageSrc}
@@ -110,7 +113,11 @@ export function MarloweTools() {
   return (
     <>
       {tools.map((tool, index) => (
-        <ToolItem key={index} {...tool} />
+        <ToolItem 
+          key={index} 
+          {...tool} 
+          imagePosition={index % 2 === 0 ? 'right' : 'left'}
+        />
       ))}
     </>
   )
@@ -119,5 +126,3 @@ export function MarloweTools() {
 <div className="nx-no-prose">
   <MarloweTools />
 </div>
-
-See our [documentation](https://docs.marlowe.iohk.io) to get started!

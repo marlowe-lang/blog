@@ -34,7 +34,7 @@ export default function Nav(): ReactElement {
   const navItems = (
     <>
       <a
-        href="https://docs.marlowe-lang.org" 
+        href="https://docs.marlowe-lang.org/docs/introduction" 
         target="_blank" 
         rel="noopener noreferrer"
         className={linkBaseClass}
