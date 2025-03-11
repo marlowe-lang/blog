@@ -61,7 +61,7 @@ export function MarloweTools() {
   const tools = [
     {
       title: "Playground",
-      description: "Create and test smart contracts in a visual environment. Perfect for both beginners and experienced developers:",
+      description: "Create and test smart contracts in a pure and visual environment. Perfect for the beginners:",
       features: [
         "Design with JavaScript, Haskell, Blockly, or Marlowe",
         "Test and simulate contract execution",
@@ -74,34 +74,38 @@ export function MarloweTools() {
     },
     {
       title: "TypeScript SDK",
-      description: "Integrate Marlowe contracts into your applications:",
+      description: "Build applications with Marlowe smart contracts:",
       features: [
-        "TypeScript SDK for application integration"
+        "Complete TypeScript SDK for application integration",
+        "High-level abstractions for simplified contract execution",
+        "Built-in REST client for Runtime API integration",
       ],
-      link: "https://github.com/input-output-hk/marlowe-ts-sdk/tree/main",
+      link: "https://github.com/marlowe-lang/marlowe-ts-sdk/tree/main",
       linkText: "Explore SDK →",
       imageSrc: "/imgs/blog/ts-sdk.png",
       imageAlt: "Marlowe TypeScript SDK"
     },
     {
       title: "Runtime",
-      description: "Integrate Marlowe contracts into your applications:",
+      description: "Deploy and manage Marlowe contracts on the Cardano blockchain:",
       features: [
-        "Runtime services for backend support",
-        "Comprehensive API access"
+        "Well-documented REST API with OpenAPI specification",
+        "Abstracts UTxO complexity for simplified Cardano blockchain interaction",
+        "Full web wallet and CIP-30 compatibility"
       ],
-      link: "https://github.com/input-output-hk/marlowe-ts-sdk/tree/main",
-      linkText: "Explore SDK →",
+      link: "https://preprod.100.runtime.marlowe-lang.org/openapi.html",
+      linkText: "Explore Runtime REST API →",
       imageSrc: "/imgs/blog/runtime.png",
       imageAlt: "Marlowe Runtime"
     },
     {
       title: "Runner",
-      description: "Deploy and execute your contracts on Cardano with minimal effort:",
+      description: "A web interface for deploying and managing Marlowe contracts on Cardano preprod:",
       features: [
-        "Easy deployment process",
-        "Monitor contract execution",
-        "Manage contract interactions"
+        "Easy deployment process using your favourite web wallet",
+        "Monitor and manage contract execution",
+        "Available on the preprod testnet for immediate testing",
+        "An example of a pure frontend DApp which uses Marlowe Runtime as the only backend"
       ],
       link: "https://preprod.runner.marlowe-lang.org/",
       linkText: "Use Runner →",
